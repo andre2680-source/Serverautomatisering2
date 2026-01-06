@@ -1,0 +1,18 @@
+name = input("Enter your name: ") # Get the user's name
+age = int(input("Enter your age: ")) # Get the user's age
+
+current_year = 2026 # You can update this to the current year
+
+if age < 100:
+    hundredth_birthday_year = current_year + (100 - int(age)) # Calculate the year when the user will turn 100
+    message = f"Hello {name}! You will turn 100 years old in the year {hundredth_birthday_year}." # Create the message
+elif age == 100: 
+    hundredth_birthday_year = current_year # User is already 100 years old
+    message = f"Hello {name}! You are already 100 years old this year, {hundredth_birthday_year}." # Create the message
+else:
+    hundredth_birthday_year = current_year - (int(age) - 100) # User is over 100 years old
+    message = f"Hello {name}! You turned 100 years old in the year {hundredth_birthday_year}." # Create the message
+
+repeat = int(input("How many times would you like to repeat the message? ")) # Get the number of repetitions from the user
+
+print((message + "\n") * repeat) # Print the message the specified number of times 
