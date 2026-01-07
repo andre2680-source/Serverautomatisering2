@@ -12,7 +12,7 @@ host = [
 
 Port = 80 # HTTP port (can be changed to 443 for HTTPS)
 
-timeout_in_seconds = 2.0 # Timeout for each connection attempt
+timeout_in_seconds = 4.0 # Timeout for each connection attempt
 
 def check_host_reachability(host, port, timeout): # Function to check if a host is reachable on a specific port
     start_time = time.time() # Record the start time
@@ -46,8 +46,6 @@ def check_host_reachability(host, port, timeout): # Function to check if a host 
         sock.close() # Close the socket
         return f"ERROR: {e}", elapsed_time # Return error status and elapsed time
     
-    print(f"Checking TCP connections on port {Port} (timeout: {timeout_in_seconds}s)\n")
-
 for h in host: # Iterate through each host in the list
     status, elapsed = check_host_reachability(h, Port, timeout_in_seconds) # Check reachability
     elapsed_str = f"{elapsed:.3f} seconds" # Format elapsed time to 3 decimal places
