@@ -51,4 +51,3 @@ for h in host: # Iterate through each host in the list
     elapsed_str = f"{elapsed:.3f} seconds" # Format elapsed time to 3 decimal places
 
     print(f"{h:<25} | port {Port:<5} | {status:<20} | time: {elapsed_str}") # Print the results
-

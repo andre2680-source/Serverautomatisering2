@@ -5,3 +5,4 @@ print("Elements less than 5:")
 for element in array:
     if element < 5:
         print(element)
+

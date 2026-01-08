@@ -15,4 +15,4 @@ else:
 
 repeat = int(input("How many times would you like to repeat the message? ")) # Get the number of repetitions from the user
 
-print((message + "\n") * repeat) # Print the message the specified number of times 
+print((message + "\n") * repeat) # Print the message the specified number of times 0
